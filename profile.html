@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Pengguna - Hanabi Library</title>
+  <link rel="shortcut icon" href="assets/image/knowledge.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .bg-cover {
+      background-image: url('Polabooks-Online.png');
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+
+    }
+  </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-cover">
+  <header class="bg-dark text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo">
+        <img src="assets/image/knowledge.png" alt="Logo Perusahaan" class="img-fluid" width="50" height="70">
+      </div>
+      <div class="judul">
+        <h1 class="h4 mb-0">Hanabi Library</h1>
+      </div>
+    </div>
+  </header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Hanabi Library</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="books.html">Daftar Buku</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="borrow-book.html">Peminjaman Buku</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="return-book.html">Pengembalian Buku</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="registrasi.html">Registrasi</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow-lg">
+          <div class="row no-gutters">
+            <div class="col-md-4 text-center">
+              <img src="assets/image/user-profile.jpg" class="card-img-top rounded-circle mt-4 mar" alt="Foto Profil"
+                style="width: 250px; height: 150px; object-fit: cover; border-radius: 100%;">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h3 class="card-title">SYIFA AYU APRILIA</h3>
+                <p class="card-text text-muted">Member Sejak: <span id="join-date">01 Januari 2025</span></p>
+                <ul class="list-unstyled">
+                  <li><strong>Email:</strong> <span id="user-email">syifa.ayu1234592@mail.com</span></li>
+                  <li><strong>Alamat:</strong> <span id="user-address">Jl. Lada Dalam No. 5B</span></li>
+                  <li><strong>Telepon:</strong> <span id="user-phone">0878-1797-7208</span></li>
+                </ul>
+                <div class="d-flex justify-content-between">
+                  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">Edit
+                    Profil</button>
+                  <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#changePasswordModal">Ganti
+                    Password</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editProfileModalLabel">Edit Profil</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="edit-profile-form">
+            <div class="mb-3">
+              <label for="edit-name" class="form-label">Nama Lengkap</label>
+              <input type="text" class="form-control" id="edit-name" value="Nama Pengguna">
+            </div>
+            <div class="mb-3">
+              <label for="edit-email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="edit-email" value="pengguna@mail.com">
+            </div>
+            <div class="mb-3">
+              <label for="edit-address" class="form-label">Alamat</label>
+              <input type="text" class="form-control" id="edit-address" value="Jl. Contoh No. 123, Kota">
+            </div>
+            <div class="mb-3">
+              <label for="edit-phone" class="form-label">Telepon</label>
+              <input type="text" class="form-control" id="edit-phone" value="0812-3456-7890">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Simpan Perubahan</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="changePasswordModalLabel">Ganti Password</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="change-password-form">
+            <div class="mb-3">
+              <label for="old-password" class="form-label">Password Lama</label>
+              <input type="password" class="form-control" id="old-password" required>
+            </div>
+            <div class="mb-3">
+              <label for="new-password" class="form-label">Password Baru</label>
+              <input type="password" class="form-control" id="new-password" required>
+            </div>
+            <div class="mb-3">
+              <label for="confirm-password" class="form-label">Konfirmasi Password Baru</label>
+              <input type="password" class="form-control" id="confirm-password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Ganti Password</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+<footer class="bg-dark text-white text-center py-2 mt-auto fixed-bottom">
+  <p>&copy; 2025 Perpustakaan || Syifa Ayu Aprilia ||2410011700110</a></p>
+</footer>
+
+</html>
